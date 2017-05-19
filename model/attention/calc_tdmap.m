@@ -1,12 +1,12 @@
 function [ td_map ] = calc_tdmap( g, bu, W_, hp )
     %GETTDMAP Get top-down saliency map.
     %   Args:
-    %     g:
-    %     bu:
-    %     W:
-    %     hp:
+    %     g: Top-down signal.
+    %     bu: Bottom-up saliency map.
+    %     W: NN weights, conv kernel or full-connected layer weights.
+    %     hp: Hyperparamters.
     %   Returns:
-    %     td_map:
+    %     td_map: Top-down saliency map.
     %
     %   Author: Wan Xiaolin <wanxl13@lzu.edu.cn>
     
@@ -31,39 +31,3 @@ function [ td_map ] = calc_tdmap( g, bu, W_, hp )
         td_map = bu .* Z;
     end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
