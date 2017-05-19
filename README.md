@@ -20,4 +20,4 @@ utils: Utilities for data and parameters format conversion.
 
 ### [Download](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-16.mat) Pre-trained Model
 
-### P.S. 这个模型还有object-localize和reclassification未完成，此坑已弃。
+P.S. 这个模型还有object-localize和reclassification未完成，此坑已弃。
