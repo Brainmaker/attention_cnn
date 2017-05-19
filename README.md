@@ -10,13 +10,13 @@ memory >= 4GB
 
 
 ## Folders
-model/attention: The Implementations of top-down attention model. 
+model/attention: The Implementations of top-down attention on CNN model. 
 
 model/cnn: Standard VGG16 ConvNets 
 
-model/io: Model visualization, hyperparameter and data read. 
+model/io: Model visualization, hyperparameters and data preprocessing. 
 
-model/utils: Utilities for data and parameters format conversion.
+model/utils: Utilities for CNN and attention model.
 
 ### [Download](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-16.mat) Pre-trained Model
 
