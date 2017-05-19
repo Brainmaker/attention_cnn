@@ -4,15 +4,15 @@ function [ td ] = backward(...
     )
     %BACKWARD Generate top-down saliency map
     %   Args:
-    %     input_img:
-    %     prior:
-    %     bu1:
-    %     pool_map:
-    %     pool_cord:
-    %     krnl:
-    %     fc_param:
-    %     hp: hyperparameters
-    %     use_contra:
+    %     input_img: The original image.
+    %     prior: Prior infomation.
+    %     bu1: Buttom-up saliency map
+    %     pool_map: Pooled map.
+    %     pool_cord: Max element index in pool map
+    %     krnl: Convolutional kernel.
+    %     fc_param: Full-connected layer weights.
+    %     hp: Hyperparameters
+    %     use_contra: If this option is true, backward() will generate the pruned processing tree.
     %   Returns:
     %     td: Top-down saliency map, 8*3 cell array, corresponding to bu1.
     %
