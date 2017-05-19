@@ -10,7 +10,7 @@ memory >= 4GB
 
 
 ## Folders
-model/attention: The Implementations of top-down attention. 
+model/attention: The Implementations of top-down attention model. 
 
 model/cnn: Standard VGG16 ConvNets 
 
