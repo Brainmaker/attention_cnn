@@ -15,6 +15,7 @@ function [ y ] = im2col( tensor3d )
     im_size = size(tensor3d, 1) - 2;
     deepth = size(tensor3d, 3);
     
+    % Generate differential index, e.g. '0, 1, 2, 1, 2, 3, 2, 3, 4, ...'.
     index = repmat([0, 1, 2], [1, im_size]) + ...
             reshape(repmat(1:im_size, [kr_size, 1]), [1, kr_size*im_size]);
     
