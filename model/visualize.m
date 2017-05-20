@@ -14,7 +14,7 @@ data_testset = read_data(data_path, n_test_samples);
 [param_conv_W, param_conv_b, param_fc_W, param_fc_b] = load_params(model_path);
 
 %% Generate conv feature map, MWP, and competative MWP. 
-result = cell(4, 4, n_test_samples);
+result = cell(5, 4, n_test_samples);
 for i = 1 : n_test_samples
     disp(['Processing test image ', ...
         num2str(i), '/', num2str(n_test_samples), '.']);
@@ -47,7 +47,7 @@ for i = 1 : n_test_samples
     % Generate Top-down saliency map, using processing tree pruning and
     % prior information gain.
     prior_1 = []; % Given a specific prior.
-    use_competitive_fc_tdmap = true;
+    use_competitive_fc_tdmap_1 = true;
     hp = load_hyperparams(true); % Using hyperparameters;
     prior_tree_pruning_tdmap = backward( ...
         data_testset{i}, prior_1, ...
@@ -57,7 +57,7 @@ for i = 1 : n_test_samples
     );
 
     prior_2 = []; % Given a specific prior.
-    use_competitive_fc_tdmap = true;
+    use_competitive_fc_tdmap_2 = true;
     hp = load_hyperparams(true); % Using hyperparameters;
     prior_tree_pruning_tdmap = backward( ...
         data_testset{i}, prior_2, ...
@@ -70,7 +70,8 @@ for i = 1 : n_test_samples
         result{1, j-1, i} = gen_figs(bu1_map{j, 1});
         result{2, j-1, i} = gen_figs(tdmap{j, 1});
         result{3, j-1, i} = gen_figs(tree_pruning_tdmap{j, 1});
-        result{4, j-1, i} = gen_figs(prior_tree_pruning_tdmap{j, 1});
+        result{4, j-1, i} = gen_figs(prior_tree_pruning_tdmap_1{j, 1});
+        result{5, j-1, i} = gen_figs(prior_tree_pruning_tdmap_2{j, 1});
     end
 end 
 
