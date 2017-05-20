@@ -1,5 +1,5 @@
 function [ td_map ] = calc_tdmap( g, bu, W_, hp )
-    %GETTDMAP Get top-down saliency map.
+    %GETTDMAP Calculate top-down saliency map on the given parameters.
     %   Args:
     %     g: Top-down signal.
     %     bu: Bottom-up saliency map.
