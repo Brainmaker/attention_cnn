@@ -11,8 +11,9 @@ function [ y ] = im2col( tensor3d )
     %
     %   Author: Wan Xiaolin <wanxl13@lzu.edu.cn>
     
-    kr_size = 3;
-    im_size = size(tensor3d, 1) - 2;
+    kr_size = 3;       % VGG16
+    padding_size = 1;  % VGG16  
+    im_size = size(tensor3d, 1) - 2*padding_size;
     deepth = size(tensor3d, 3);
     
     % Generate differential index, e.g. '0, 1, 2, 1, 2, 3, 2, 3, 4, ...'.
