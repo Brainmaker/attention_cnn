@@ -1,5 +1,5 @@
 function [ y ] = im2col( tensor3d )
-    %IM2COL Rearrange 3*3 image patches into matrix columns 
+    %IM2COL Rearrange 3*3 deepwise image patches into matrix columns 
     %   Args:
     %     tensor3d: [ (im_size+2) * (im_size+2) * deepth ], 
     %       tensor3d must be a padded images.
