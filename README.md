@@ -1,7 +1,5 @@
 # Top-down Visual Attention in Convolutional Networks
 
-Implementations of the model presented in my graduation thesis.
-
 ## Requirements:
 matlab >= 2016b
 
